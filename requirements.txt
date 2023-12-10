@@ -1,0 +1,7 @@
+pip
+streamlit
+numpy
+pandas
+matplotlib
+seaborn
+altair<5

@@ -209,13 +209,17 @@ elif data_col == "Line Plot":
         plt.legend(title='Gender', loc='upper right')
         st.pyplot(fig)
     select_line_five = st.checkbox(label="Total Sale on Each Day for All Months")
+
+
     if select_line_five:
         fig, ax = plt.subplots()
-        ax = sns.lineplot(x=df2['Day'], y=df2['Total'], hue=df2['Month'], err_style=None, palette='crest')
+        ax = sns.lineplot(x=df2['Product line'], y=df2['Total'], hue=df2['Month'], err_style=None, palette='crest')
         plt.legend(title='Month', loc='upper right')
         plt.title('Total Sale on Each Day for All Months')
         st.pyplot(fig)
     select_line_six = st.checkbox(label="Number of Products bought by Different Genders from Different Product Lines")
+
+
     if select_line_six:
         fig, ax = plt.subplots()
         ax = sns.lineplot(x=df2['Product line'], y=df2['Quantity'], data=df2, hue=df2['Gender'], err_style=None)
